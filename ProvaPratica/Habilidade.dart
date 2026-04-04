@@ -35,7 +35,7 @@ class ChoqueDoTrovao extends Habilidade {
 
 // - Classe concreta JatoDAgua
 class JatoDAgua extends Habilidade {
-  JatoDAgua() : super('Jato de Água', 15);
+  JatoDAgua() : super('Jato de Água', 10);
 
   @override
   void usar(Pokemon usuario, Pokemon alvo) {
@@ -52,7 +52,7 @@ class JatoDAgua extends Habilidade {
 
 // - Classe concreta Lancachamas
 class Lancachamas extends Habilidade {
-  Lancachamas() : super('Lança Chamas', 25);
+  Lancachamas() : super('Lança Chamas', 15);
 
   @override
   void usar(Pokemon usuario, Pokemon alvo) {

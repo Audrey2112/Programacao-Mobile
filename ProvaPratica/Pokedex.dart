@@ -55,5 +55,49 @@ class Pokedex {
       _pokemons[i].exibirFicha();
     }
   }
- 
+
+  // - Listar Pokemons capturados - (Questão 05) 
+  List<Pokemon> listarCapturados() {
+    List<Pokemon> resultado = []; // - o retorno vai ser um []
+    for (int i = 0; i < _pokemons.length; i++) { // - Aqui olha de Pokemon por pokemon, de 1 por 1
+      if (_pokemons[i].capturado) {
+        resultado.add(_pokemons[i]); // - Se o Pokemon foi capturado (true), coloca ele dentro da lista []
+      }
+    }
+    return resultado;
+  }
+
+  // - Listar por tipo - Deve ignorar letras maiúsculas/minúsculas - (Questão 05)
+  List<Pokemon> listarPorTipo(String tipo) {
+    List<Pokemon> resultado = [];
+    for (int i = 0; i < _pokemons.length; i++) {
+      if (_pokemons[i].tipo.toLowerCase() == tipo.toLowerCase()) { // - aqui o responsável por ignorar se está escrito em maiusculo ou minusculo é o toLowercase (vai transformar tudo em minusculo)
+        resultado.add(_pokemons[i]);
+      }
+    }
+    return resultado;
+  }
+
+  // - Listar pokemons com nível acima do mínimo digitado
+  List<Pokemon> listarAcimaDoNivel(int nivelMinimo) {
+    List<Pokemon> resultado = [];
+    for (int i = 0; i < _pokemons.length; i++) {
+      if (_pokemons[i].nivel > nivelMinimo) { // - se o Pokemon tiver nivel maior do que o digitado, é colocado na lista tbm
+        resultado.add(_pokemons[i]);
+      }
+    }
+    return resultado;
+  }
+
+  // - Listar pokemons que podem evoluir 
+  // - Condição: tem próxima evolução definida e tbm já atingiu o nível necessário
+  List<Pokemon> listarQuePodemEvoluir() {
+    List<Pokemon> resultado = [];
+    for (int i = 0; i < _pokemons.length; i++) {
+      if (_pokemons[i].proximaEvolucao != null && _pokemons[i].nivel >= _pokemons[i].nivelEvolucao) { // Ambas as coisas devem ocorrer para o pokemon se listado, deve possuir uma evolução (não pode ser nulo) E tbm deve possuir nivel necessrrio
+        resultado.add(_pokemons[i]);
+      }
+    }
+    return resultado;
+  }
 }

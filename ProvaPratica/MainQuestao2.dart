@@ -8,8 +8,7 @@ void main() {
   print('\n------------------------------------------------------------------');
   pokemon1.subirNivel(5);      
   pokemon1.receberDano(15);    
-  pokemon1.curar(10);                    
-  pokemon1.receberDano(50);          
+  pokemon1.curar(10);                             
   pokemon1.exibirFicha();
  
   print('\n------------------------------------------------------------------');

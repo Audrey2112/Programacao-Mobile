@@ -1,5 +1,5 @@
-import 'pokemon.dart';
-import 'pokedex.dart';
+import 'Pokemon.dart';
+import 'Pokedex.dart';
  
 void main() {
   Pokedex pokedex = Pokedex();

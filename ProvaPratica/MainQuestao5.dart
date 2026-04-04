@@ -26,16 +26,15 @@ void main() {
   pokedex.adicionarPokemon(pokemon4);
   pokedex.adicionarPokemon(pokemon5);
 
-  // - Função local para exibir o resultado de cada filtro
-  void mostrarFiltro(String titulo, List<Pokemon> lista) {
+  void mostrarFiltro(String titulo, List<Pokemon> lista) { // - simplificando o metodo de todos os filtros, para nao ficar repetitivo varios print e for
     print('\n------------------------------------------------------------------');
     print('$titulo:');
-    if (lista.isEmpty) {
-      print('Nenhum resultado.');
+    if (lista.isEmpty) {  // - se a lista veio vazia, exibe a mensagem abaixo
+      print('Nenhum Pokemon encontrado :(');
       return;
     }
     for (int i = 0; i < lista.length; i++) {
-      print('  - #${lista[i].numero} ${lista[i].nome} (${lista[i].tipo}) Nv.${lista[i].nivel}');
+      print('  - #${lista[i].numero} ${lista[i].nome} (${lista[i].tipo}) Nv.${lista[i].nivel}'); // - se a lista não veio vazia, vai listar de acordo com numero, nome, tipo e nivel
     }
   }
 

@@ -195,7 +195,7 @@ class Pokemon implements RegistravelNaPokedex {
   @override
   void favoritar() {
     if (!_capturado) {
-      print('Erro. Não é possível favoritar o Pokemon $_nome, pois ele ainda não foi capturado');
+      print('Erro. Não é possível favoritar o Pokemon $_nome, pois ele ainda não foi capturado :(');
       return;
     }
     _favorito = true;
@@ -205,7 +205,7 @@ class Pokemon implements RegistravelNaPokedex {
   @override
   void desfavoritar() {
     _favorito = false;
-    print('O Pokemon $_nome foi removido dos favoritos');
+    print('O Pokemon $_nome foi removido dos favoritos :(');
   }
 }
 

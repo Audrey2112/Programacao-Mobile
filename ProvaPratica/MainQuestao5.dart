@@ -34,7 +34,7 @@ void main() {
       return;
     }
     for (int i = 0; i < lista.length; i++) {
-      print('  - #${lista[i].numero} ${lista[i].nome} (${lista[i].tipo}) Nv.${lista[i].nivel}'); // - se a lista não veio vazia, vai listar de acordo com numero, nome, tipo e nivel
+      print('  - ${lista[i].numero} ${lista[i].nome} (${lista[i].tipo}) Nv.${lista[i].nivel}'); // - se a lista não veio vazia, vai listar de acordo com numero, nome, tipo e nivel
     }
   }
 

@@ -102,4 +102,66 @@ class Pokedex {
     }
     return resultado;
   }
+  
+  
+  // - Estatísticas da Pokédex - (Questão 11)
+  int totalPokemons() { // - vai retornar o total de pokemons que foram criados
+    return _pokemons.length;
+  }
+  
+  // - quantidadePorTipo() deve agrupar corretamente os pokémons por tipo - (Questao 11)
+  Map<String, int> quantidadePorTipo() { // - Map<String, int> é como uma agenda, de um lado fica o tipo (String) e do outro a quantidade (int)
+    Map<String, int> resultado = {}; // - começa com a agenda vazia {}
+   
+    for(int i = 0; i < _pokemons.length; i++) {
+      String tipo = _pokemons[i].tipo;
+      if(resultado.containsKey(tipo)) { // - containsKey verifica se esse tipo já existe na agenda
+        resultado[tipo] = resultado[tipo]! + 1;
+      } else {
+        resultado[tipo] = 1;
+      }
+    }
+    return resultado;
+  }
+  
+  // - double mediaDeNivel() -> deve retornar valor decimal - (Questao 11)
+  double mediaDeNivel() {
+    if(_pokemons.isEmpty) { // - se a Pokédex estiver vazia, os métodos numéricos devem retornar 0 sem erro.
+      return 0;
+    }
+    int soma = 0;
+    for(int i = 0; i < _pokemons.length; i++) {
+      soma = soma + _pokemons[i].nivel; // - vai acumulando a soma dos níveis
+    }
+    return soma / _pokemons.length; // - basicamente, divide a soma total pela quantidade de pokemons = média
+  }
+  
+  // - double percentualCapturados() -> percentualCapturados() deve retornar percentual entre 0 e 100 - (Questão 11)
+  double percentualCapturados() {
+    if(_pokemons.isEmpty) {
+      return 0;
+    }
+    
+    int capturados = 0;
+    for(int i = 0; i < _pokemons.length; i++) {
+      if(_pokemons[i]. capturado) { // - se o pokemon foi capturado (true), add + 1
+        capturados = capturados + 1;
+      }
+    }
+   return (capturados / _pokemons.length) * 100; // - percentual se multiplica por 100
+  }
+  
+  // - Exibir Estatística: vai exibir as estatisticas dos Pokemons de forma organizada, assim como o exibir ficha - (Questão 11)
+  void exibirEstatistica() {
+    print('---------------------------------------------------------------------------');
+    print('\n--- Estatisticas dos Pokemons da Pokedex: ---');
+    print('\nTotal de Pokemons cadastrados: ${totalPokemons()}');
+    print('\nQuantidade de Pokemons por tipo: ');
+    Map<String, int> porTipo = quantidadePorTipo(); // - guarda o resultado da agenda em uma variável
+    porTipo.forEach((tipo, quantidade) { // - esse forEach percorre cada item da agenda e devolve dps
+      print('-> $tipo: $quantidade');
+    });
+    print('\nMédia do Nível dos Pokemons: ${mediaDeNivel().toStringAsFixed(1)}'); // - toStringAsFixed(1) serve para mostrar só 1 casa decimal
+    print('\nPercentual de Pokemons capturados = ${percentualCapturados().toStringAsFixed(1)}%'); 
+  }
 }

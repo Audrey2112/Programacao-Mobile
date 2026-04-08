@@ -122,5 +122,4 @@ void main() {
   print('\n--------------------------------------------------------------------------------------------');
   print('7. Estatítica final dos POkemons na Pokedex: ');
   pokedex.exibirEstatistica();
-
 }

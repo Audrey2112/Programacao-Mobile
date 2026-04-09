@@ -73,7 +73,7 @@ class Pokedex {
   List<Pokemon> listarPorTipo(String tipo) {
     List<Pokemon> resultado = [];
     for (int i = 0; i < _pokemons.length; i++) {
-      if (_pokemons[i].tipo.toLowerCase() == tipo.toLowerCase()) { // - aqui o responsável por ignorar se está escrito em maiusculo ou minusculo é o toLowercase (vai transformar tudo em minusculo)
+      if (_pokemons[i].tipo.toLowerCase().contains(tipo.toLowerCase())) { // - aqui o responsável por ignorar se está escrito em maiusculo ou minusculo é o toLowercase (vai transformar tudo em minusculo). E tbm o o contains() vai verificar se o tipo digitado corresponde ao que está sendo buscado
         resultado.add(_pokemons[i]);
       }
     }

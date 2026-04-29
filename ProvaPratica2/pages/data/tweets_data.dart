@@ -57,7 +57,7 @@ final List<Modelostwiter> tweets = [
     iconeCor: Color.fromARGB(255, 144, 32, 218),
     tempo: '',
     textoUsuario: 'Run a second-hand game sotore! Buy sell, negotiate, make profite! (Wishlst on Steam)',
-    imagemPost: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3683940/2c132eb427ba742b39de83f3615b59aa6e5a64dd/header.jpg?t=1750954000',
+    imagemPost: 'https://tse2.mm.bing.net/th/id/OIP.pBcYQ_IOfIkpxp8SZ3rAmAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
     ehVerificado: false,
     ehAnuncio: true,
     comentarios: 23,

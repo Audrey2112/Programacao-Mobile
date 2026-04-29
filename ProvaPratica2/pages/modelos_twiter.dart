@@ -16,7 +16,7 @@ class Modelostwiter {
   final String? views; // indica que pode ser nulo, usando o ?
   final String? imagemPost;
 
-  const Modelostwiter({
+  const Modelostwiter({ // - const significa que o objeto inteiro é criado em tempo de compilação, não em execução.
     required this.nomeUsuario,
     required this.arroba,
     required this.letraUsuario,

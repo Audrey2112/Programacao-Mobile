@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart'; 
 
 class Modelostwiter {
-  final String nomeUsuario;
+  final String nomeUsuario; // - esse final basicamente diz: esse dado foi definido na criação e ninguém mais mexe nele
   final String arroba; // @ do usuário
   final String letraUsuario;
   final String tempo;

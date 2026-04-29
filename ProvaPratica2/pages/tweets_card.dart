@@ -72,7 +72,7 @@ class TweetHeader extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Wrap( // quebra linha automaticamente se não couber o texto
+          child: Wrap( // quebra linha automaticamente se não couber o texto, não se usa row aqui pq ele nunca quebra linha e pode causar overflow
             crossAxisAlignment: WrapCrossAlignment.center,
             spacing: 4, // espaço entre os textos
             children: [
